@@ -65,7 +65,7 @@ export class ChatControls extends Element
         if(e.data == '[DONE]'){
             
             if(this.currentFn){
-                
+                this.currentArgs = JSON.stringify(this.currentArgs)
                 this.currentArgs = JSON.parse(this.currentArgs)
                 console.log("function call", this.currentFn, this.currentArgs)
                 switch(this.currentFn){
